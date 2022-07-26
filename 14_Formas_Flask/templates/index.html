@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HTML!</title>
+</head>
+
+<body>
+  <div>
+    <h1>Bienvenido</h1>
+    <div>
+      <p>¿A quién quieres vistar?</p>
+      <form action="buscar">
+        <label>Nombre</label>
+        <input type="text" name="nombre"><br>
+        <input type="submit">
+      </form>
+    </div>
+    {% if last_seen != "" %}
+    <div>
+      <p>Reciente: <a href="/mascota/{{last_seen}}">{{last_seen}}</a></p>
+    </div>
+    {% endif %}
+    <div>
+      <ul>
+        {% for m in mascotas %}
+        <li><a href="/mascota/{{m}}">{{m}}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>

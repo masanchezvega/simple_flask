@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Algunas HTML Tags</title>
+</head>
+
+<body>
+  <!-- los códigos como &gt; o &lt; se conocen como escape characters. http://www.theukwebdesigncompany.com/articles/entity-escape-characters.php -->
+  <!-- nos permiten mostrar caracteres que si escribiéramos directamente serían tratados como parte del código en lugar de texto -->
+  <h1>Ejemplos de HTML Tags</h1>
+  <section>
+    <hr>
+    <h2>Párrafo</h2>
+    <p>
+      <code>&lt;p&gt;</code> es un contenedor de texto. Es un elemento que busca ser un párrafo que tiene su propio espacio vertical
+      <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p">Docs</a>
+    </p>
+  </section>
+
+  <section>
+    <hr>
+    <h2>Encabezados</h2>
+    <p>
+      <code>&lt;h1&gt; - &lt;h6&gt;</code> son textos con un estilo agrandado que usualmente utilizamos para títulos.
+      <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements">Docs</a>
+    </p>
+  </section>
+
+  <section>
+    <hr>
+    <h2>Separador horizontal</h2>
+    <p>
+      <code>&lt;hr /&gt;</code> genera un separador visible. Este es un ejemplo de tag auto-cerrado que se escribe como <code>&lt;hr&gt;</code> en lugar de <code>&lt;hr&gt;&lt;/hr&gt;</code>.
+      <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr">Docs</a>
+    </p>
+  </section>
+
+  <section>
+    <hr>
+    <h2>Imágenes</h2>
+    <p>
+      <code>&lt;img /&gt;</code> representa una imagen en el documento. Para que se muestre, tenemos que indicar donde se encuentra almacenada a través del atributo <code>"src"</code> y la dirección de la imagen.
+    </p>
+    <p>Por ejemplo, este tag: <br><code>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" /&gt;</code></p>
+    <p>Trae esta imagen: <br><img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" width="200" /></p>
+    <p>
+      <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">Docs</a>
+    </p>
+  </section>
+
+  <section>
+    <hr>
+    <h2>Enlaces</h2>
+    <p>
+      <code>&lt;a&gt;</code> crean hipervínculos en una página. Requieren al menos el atributo <code>"href"</code> con el que pasamos la dirección a la que este enlace debe dirigir, similar a cómo lo hacemos con el <code>"src"</code> de las imágenes.
+    </p>
+    <p>
+      Por ejemplo, este código:
+      <code>&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;&quot;&gt;Ir a Github&lt;&#x2F;a&gt;</code>
+    </p>
+    <p>
+      Produce este hipervínculo:
+      <a href="https://github.com/">Ir a Github</a>
+    </p>
+    <p>
+      <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr">Docs</a>
+    </p>
+  </section>
+
+  <section>
+    <hr>
+    <h2>Listas</h2>
+    <p>
+      <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> se usan para generar listas no enumeradas en la página.
+    </p>
+    <p>Por ejemplo, este código:</p>
+    <code>
+      &lt;ul&gt;<br>
+      &nbsp;&nbsp;&lt;li&gt;Lunes&lt;/li&gt;<br>
+      &nbsp;&nbsp;&lt;li&gt;Martes&lt;/li&gt;<br>
+      &nbsp;&nbsp;&lt;li&gt;Sábado&lt;/li&gt;<br>
+      &lt;/ul&gt;<br>
+    </code>
+    <p>
+      Genera esta lista:
+    </p>
+    <ul>
+      <li>Lunes</li>
+      <li>Martes</li>
+      <li>Sábado</li>
+    </ul>
+    <p>También podemos hacer listas numeradas cambiando <code>ul</code> por <code>ol</code> al momento de generarla:</p>
+     <code>
+      &lt;ol&gt;<br>
+      &nbsp;&nbsp;&lt;li&gt;Lunes&lt;/li&gt;<br>
+      &nbsp;&nbsp;&lt;li&gt;Martes&lt;/li&gt;<br>
+      &nbsp;&nbsp;&lt;li&gt;Miércoles&lt;/li&gt;<br>
+      &lt;/ol&gt;<br>
+    </code>
+    <ol>
+      <li>Lunes</li>
+      <li>Martes</li>
+      <li>Miércoles</li>
+    </ol>
+    <p>
+      <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul">Docs (ul - Unordered Lists)</a>
+      <br>
+      <br>
+      <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul">Docs (ol - Ordered Lists)</a>
+    </p>
+  </section>
+
+  <section>
+    <hr>
+    <h2>Tablas</h2>
+    <p>
+      <code>&lt;table&gt;</code> se usa para indicar que la información se va a mostrar de forma tabular. Este tag requiere de otros como <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code> <code>&lt;th&gt;</code> para estructurar nuestra tabla.
+    </p>
+    <p>Por ejemplo, con este código:</p>
+    <section>
+      <code>
+      &lt;table border=&quot;1&quot;&gt;
+        <br>&nbsp;&nbsp;&lt;tr&gt;
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Marca&lt;&#x2F;th&gt;
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Modelo&lt;&#x2F;th&gt;
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Potencia&lt;&#x2F;th&gt;
+        <br>&nbsp;&nbsp;&lt;&#x2F;tr&gt;
+        <br>&nbsp;&nbsp;&lt;tr&gt;
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Tesla&lt;&#x2F;td&gt;
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;S&lt;&#x2F;td&gt;
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;1,052 hp&lt;&#x2F;td&gt;
+        <br>&nbsp;&nbsp;&lt;&#x2F;tr&gt;
+        <br>&nbsp;&nbsp;&lt;tr&gt;
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Bugatti&lt;&#x2F;td&gt;
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Divo&lt;&#x2F;td&gt;
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;1,500 hp&lt;&#x2F;td&gt;
+        <br>&nbsp;&nbsp;&lt;&#x2F;tr&gt;
+        <br>&nbsp;&nbsp;&nbsp;&lt;tr&gt;
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Pagani&lt;&#x2F;td&gt;
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Huayra&lt;&#x2F;td&gt;
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;850 hp&lt;&#x2F;td&gt;
+        <br>&nbsp;&nbsp;&lt;&#x2F;tr&gt;
+        <br>&nbsp;&nbsp;&lt;tr&gt;
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Toyota&lt;&#x2F;td&gt;
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;GR010 Hybrid&lt;&#x2F;td&gt;
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;939 hp&lt;&#x2F;td&gt;
+        <br>&nbsp;&nbsp;&lt;&#x2F;tr&gt;
+        <br>&lt;&#x2F;table&gt;
+      </code>
+    </section>
+    <p>Produces this table:</p>
+    <table border="1">
+      <tr>
+        <th>Marca</th>
+        <th>Modelo</th>
+        <th>Potencia</th>
+      </tr>
+      <tr>
+        <td>Tesla</td>
+        <td>S</td>
+        <td>1,052 hp</td>
+      </tr>
+      <tr>
+        <td>Bugatti</td>
+        <td>Divo</td>
+        <td>1,500 hp</td>
+      </tr>
+      <tr>
+        <td>Pagani</td>
+        <td>Huayra</td>
+        <td>850 hp</td>
+      </tr>
+      <tr>
+        <td>Toyota</td>
+        <td>GR010 Hybrid</td>
+        <td>939 hp</td>
+      </tr>
+    </table>
+    <p>
+      <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table">Docs</a>
+    </p>
+  </section>
+
+  <section>
+    <hr>
+    <h2>Divisiones</h2>
+    <p>
+      <code>&lt;div&gt;</code> son contenedores genéricos de elementos que sirven para agrupar estilos, acciones y dar estructura.
+    </p>
+    <p>Hay otros contenedores con significado semántico como <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article">artículos</a> or
+      <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav">navs</a> o <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer">footers</a> que se comportan exactamente como <code>div</code>, pero con un nombre distinto que nos ayuda a entender qué es lo que está contenido cuando estamos leyendo o limpiando el código, entre otras razones.
+      <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div">Docs</a>
+    </p>
+  </section>
+
+  <section>
+    <hr>
+    <h2>Strong</h2>
+    <p>
+      <code>&lt;strong&gt;</code> le dan un aspecto de negritas al texto que contienen, para hacerlo simplemente encapsulamos el texto así y <code>&lt;strong&gt;<strong>este texto estaría en negritas</strong>&lt;/strong&gt;</code>. El uso no es solo para el estilo, tiene un significado semántico de urgencia o importancia que el browser y otros programas que pueden leer HTML puede utilizar.
+      <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong">Docs</a>
+    </p>
+  </section>
+
+</body>
+
+</html>

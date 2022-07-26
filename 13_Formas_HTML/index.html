@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Forms en HTML</title>
+</head>
+
+<body>
+  <!-- los códigos como &gt; o &lt; se conocen como escape characters. http://www.theukwebdesigncompany.com/articles/entity-escape-characters.php -->
+  <!-- nos permiten mostrar caracteres que si escribiéramos directamente serían tratados como parte del código en lugar de texto -->
+  <h1>Ejemplos de elemntos de formulatios</h1>
+  <section>
+    <hr>
+    <h2>Formas</h2>
+    <p>
+      <code>&lt;form&gt;</code> Es el contenedor del formulario que reune los elementos que reciben el input del usuario. Determina las acciones al enviarlo y la forma de hacerlo.
+    <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">Docs</a>
+    </p>
+    
+  </section>
+
+  <section>
+    <hr>
+    <h2>Input</h2>
+    <p>
+      <code>&lt;input&gt;</code> es un elemento de entrada de datos genérico que adopta la forma necesaria según su tipo. 
+      Uno de sus atributos más importantes es <code>name</code> que lo identifica dentro de la forma y en la solcitud que se envía al confirmar.
+      <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">Docs</a>
+    </p>
+    <p>
+      Algunos <code>"type"</code> comunes son:
+      <ul>
+        <li style="list-style-type: none;">
+          <p><code>"text"</code> que muestra una entrada para que el usuario teclee texto.</p>
+          <code>&lt;input type="text" /&gt;</code> -&gt; <input type="text" />
+        </li>
+        <hr>
+        <li style="list-style-type: none;">
+          <p><code>"checkbox"</code> muestra una caja de selección con valor binario, para darle un valor se usa un nodo <code> label</code></coe></p>
+          <code>&lt;input type="checkbox" /&gt;&lt;label&gt;Funcional?&lt;label&gt;</code> -&gt; <input type="checkbox" /><label>Fucional?</label>
+        </li>
+        <hr>
+        <li style="list-style-type: none;">
+          <p><code>"radio"</code> similar a <code>checkbox</code> con la diferencia de que genera una familia de selectores donde solo uno puede estar seleccionado.</p>
+          <code>&lt;input type="radio" name="numero" value="1" \&gt;&lt;label&gt;Uno&lt;label&gt; <br /> 
+          &lt;input type="radio" name="numero" value="2" \&gt;&lt;label&gt;dos&lt;label&gt; -&gt; <br /> </code>
+          <input type="radio" name="numero" value="1" /><label>Uno</label>
+          <input type="radio" name="numero" value="2" /><label>Dos</label>
+        </li>
+        <hr>
+        <li style="list-style-type: none;">
+          <p><code>"submit"</code> Genera un botón que ejecuta la acción principal, <code>"submit"</code>, de la forma.</p>
+          <code>&lt;input type="submit"\&gt;</code> -&gt; <input type="submit" />
+        </li>
+      </ul>
+
+    </p>
+  </section>
+
+  <section>
+    <hr>
+    <h2>Ejemplo</h2>
+    <p>
+      Este código genera la forma que vemos más abajo.
+    </p>
+    <p>
+      <code>
+    &lt;form&gt; <br>
+      &lt;label&gt;Nombre&lt;/label&gt; &lt;input type="text" name="name"&gt; <br>
+      &lt;label&gt;Edad&lt;/label&gt; &lt;input type="number" name="age"&gt; <br>
+      &lt;label&gt;Correo Electrónico&lt;/label&gt; &lt;input type="email" name="email"&gt; <br>
+      &lt;input type="checkbox" name="tycs"&gt; &lt;label&gt;Acepta términos y condiciones&lt;/label&gt; <br>
+      &lt;input type="submit"&gt; <br>
+    &lt;/form&gt;
+      </code>
+    </p>
+
+    <form>
+      <label>Nombre</label> <input type="text" name="name"> <br>
+      <label>Edad</label> <input type="number" name="age"> <br>
+      <label>Correo Electrónico</label> <input type="email" name="email"> <br>
+      <input type="checkbox" name="tycs"> <label>Acepta términos y condiciones</label> <br>
+      <input type="submit">
+    </form>
+
+
+  </section>
+
+</body>
+
+</html>

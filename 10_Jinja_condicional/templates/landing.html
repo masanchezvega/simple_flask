@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HTML!</title>
+</head>
+
+<body>
+  <div>
+    <h1>Hola!</h1>
+  </div>
+  {% if found==True %}
+    <div>
+      <p>Me llamo <strong>{{mascota["nombre"]}}</strong>.</p>
+      <p>Soy un <strong>{{mascota["tipo"]}}</strong>.</p>
+      <p>Tengo <strong>{{mascota["edad"]}}</strong> años.</p>
+      {% if mascota["tipo"] == "Perro" %}
+        <img width="200" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=0.672xw:1.00xh;0.166xw,0&resize=640:*" />
+      {% elif mascota["tipo"] == "Gato" %}
+        <img width="200" src="https://www.fundacion-affinity.org/sites/default/files/los-10-sonidos-principales-del-gato-fa.jpg" />
+      {% elif mascota["tipo"] == "Beta" %}
+        <img width="200" src="https://atlasanimal.com/wp-content/uploads/2021/02/pez-betta.jpg" />
+      {% endif %}
+    </div>
+  {% else %}
+    <div>
+      <p>No encontramos a la mascota que buscas</p>
+    </div>  
+  {% endif %}
+    <div>
+      <p>¿Ver otro? Haz click <a href="/">aquí</a></p>
+    </div>
+  </div>
+</body>
+
+</html>
